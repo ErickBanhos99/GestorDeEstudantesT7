@@ -9,6 +9,34 @@ namespace GestorDeEstudantesT7
     internal class MeuBancoDeDados
     {
         // A conexão com o banco de dados.
-        MySqlConnection conexao = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=sga_estudantes_bd_t7");
+        private MySqlConnection conexao = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=sga_estudantes_bd_t7");
+
+        // Acessor da variável conexão
+
+        public MySqlConnection getConexao
+        {
+            get
+            {
+                return conexao;
+            }
+        }
+
+        public void abrirConexao()
+        {
+            if (conexao.State == System.Data.ConnectionState.Closed)
+            {
+                conexao.Open();
+            }
+        }
+
+        // Função para FECHAR a conexão com o banco de dados.
+
+        public void fecharConexao()
+        {
+            if (conexao.State == System.Data.ConnectionState.Open)
+            {
+                conexao.Close();
+            }
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace GestorDeEstudantesT7
 
             if (tabelaDeDados.Rows.Count > 0)
             {
-                MessageBox.Show("C Guissér si");
+                this.DialogResult = DialogResult.OK;
             }
             else
             {

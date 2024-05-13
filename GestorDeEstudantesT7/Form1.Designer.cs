@@ -42,30 +42,33 @@
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(174, 222);
+            this.textBoxSenha.Location = new System.Drawing.Point(199, 181);
             this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.PasswordChar = '*';
             this.textBoxSenha.Size = new System.Drawing.Size(137, 20);
             this.textBoxSenha.TabIndex = 0;
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(174, 170);
+            this.textBoxNome.Location = new System.Drawing.Point(199, 129);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(137, 20);
             this.textBoxNome.TabIndex = 1;
+            this.textBoxNome.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textBoxNome_MaskInputRejected);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(210, 311);
+            this.buttonCancelar.Location = new System.Drawing.Point(236, 311);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(100, 90);
             this.buttonCancelar.TabIndex = 2;
             this.buttonCancelar.Text = "CANCELAR";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(29, 311);
+            this.buttonLogin.Location = new System.Drawing.Point(49, 311);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(100, 90);
             this.buttonLogin.TabIndex = 3;
@@ -76,9 +79,9 @@
             // pictureBoxUsuario
             // 
             this.pictureBoxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsuario.Image")));
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(29, 152);
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(29, 105);
             this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(117, 100);
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(136, 123);
             this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsuario.TabIndex = 4;
             this.pictureBoxUsuario.TabStop = false;
@@ -87,7 +90,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(145, 91);
+            this.Label1.Location = new System.Drawing.Point(145, 69);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(74, 20);
             this.Label1.TabIndex = 5;
@@ -96,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(171, 152);
+            this.label2.Location = new System.Drawing.Point(196, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 6;
@@ -105,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(171, 204);
+            this.label3.Location = new System.Drawing.Point(196, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 7;

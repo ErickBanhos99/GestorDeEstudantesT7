@@ -16,5 +16,16 @@ namespace GestorDeEstudantesT7
         {
             InitializeComponent();
         }
+
+        private void estudanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void novoEstudateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInserirEstudante formInserirEstudante = new FormInserirEstudante();
+            formInserirEstudante.Show(this);
+        }
     }
 }

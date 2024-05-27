@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace GestorDeEstudantesT7
 
         public void abrirConexao()
         {
-            if (conexao.State == System.Data.ConnectionState.Closed)
+            if (conexao.State == ConnectionState.Closed)
             {
                 conexao.Open();
             }
@@ -33,7 +34,7 @@ namespace GestorDeEstudantesT7
 
         public void fecharConexao()
         {
-            if (conexao.State == System.Data.ConnectionState.Open)
+            if (conexao.State == ConnectionState.Open)
             {
                 conexao.Close();
             }

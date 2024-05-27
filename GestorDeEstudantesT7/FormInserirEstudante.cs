@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Mysqlx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -114,6 +116,22 @@ namespace GestorDeEstudantesT7
                     "Ano de nascimento inválido",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            }
+            else if (Verificar())
+            {
+                pictureBoxFoto.Image.Save(foto, pictureBoxFoto.Image.RawFormat);
+                if (estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, genero, endereco, foto))
+                {
+                    MessageBox.Show("Novo aluno cadastrado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não cadastrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Existem campos não preenchidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

@@ -97,9 +97,11 @@
             // 
             // Nascimento
             // 
+            this.Nascimento.CustomFormat = "dd/MM/yyyy";
+            this.Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Nascimento.Location = new System.Drawing.Point(291, 180);
             this.Nascimento.Name = "Nascimento";
-            this.Nascimento.Size = new System.Drawing.Size(213, 20);
+            this.Nascimento.Size = new System.Drawing.Size(99, 20);
             this.Nascimento.TabIndex = 6;
             // 
             // label4
@@ -118,7 +120,6 @@
             this.radioButtonMasc.Name = "radioButtonMasc";
             this.radioButtonMasc.Size = new System.Drawing.Size(73, 17);
             this.radioButtonMasc.TabIndex = 8;
-            this.radioButtonMasc.TabStop = true;
             this.radioButtonMasc.Text = "Masculino";
             this.radioButtonMasc.UseVisualStyleBackColor = true;
             // 
@@ -136,6 +137,7 @@
             // radioButtonFem
             // 
             this.radioButtonFem.AutoSize = true;
+            this.radioButtonFem.Checked = true;
             this.radioButtonFem.Location = new System.Drawing.Point(115, 23);
             this.radioButtonFem.Name = "radioButtonFem";
             this.radioButtonFem.Size = new System.Drawing.Size(67, 17);
@@ -149,6 +151,7 @@
             this.pictureBoxFoto.Location = new System.Drawing.Point(48, 69);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(130, 130);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFoto.TabIndex = 10;
             this.pictureBoxFoto.TabStop = false;
             // 

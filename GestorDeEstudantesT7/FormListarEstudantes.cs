@@ -44,7 +44,12 @@ namespace GestorDeEstudantesT7
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridViewListaDeEstudantes1_DoubleClick(object sender, EventArgs e)
+        {
+            // exibir as informações do estudante ao clicar nele durante
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
         {
 
         }

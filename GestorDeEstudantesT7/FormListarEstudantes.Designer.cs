@@ -35,11 +35,13 @@
             // 
             // dataGridViewListaDeEstudantes1
             // 
+            this.dataGridViewListaDeEstudantes1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewListaDeEstudantes1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListaDeEstudantes1.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewListaDeEstudantes1.Name = "dataGridViewListaDeEstudantes1";
             this.dataGridViewListaDeEstudantes1.Size = new System.Drawing.Size(767, 356);
             this.dataGridViewListaDeEstudantes1.TabIndex = 0;
+            this.dataGridViewListaDeEstudantes1.DoubleClick += new System.EventHandler(this.dataGridViewListaDeEstudantes1_DoubleClick);
             // 
             // button1
             // 
@@ -49,7 +51,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // FormListarEstudantes
             // 

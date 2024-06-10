@@ -288,28 +288,27 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonCadastrar;
-        private System.Windows.Forms.TextBox textBoxEndereco;
-        private System.Windows.Forms.TextBox textBoxTelefone;
-        private System.Windows.Forms.Button buttonEnviarFoto;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonFem;
         private System.Windows.Forms.RadioButton radioButtonMasc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBoxFoto;
-        private System.Windows.Forms.DateTimePicker Nascimento;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxSobrenome;
-        private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.Button buttonCancelar;
+        internal System.Windows.Forms.Button buttonCadastrar;
+        internal System.Windows.Forms.TextBox textBoxEndereco;
+        internal System.Windows.Forms.TextBox textBoxTelefone;
+        internal System.Windows.Forms.Button buttonEnviarFoto;
+        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.PictureBox pictureBoxFoto;
+        internal System.Windows.Forms.DateTimePicker Nascimento;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.TextBox textBoxSobrenome;
+        internal System.Windows.Forms.TextBox textBoxNome;
+        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.Label label8;
+        internal System.Windows.Forms.Button button1;
     }
 }

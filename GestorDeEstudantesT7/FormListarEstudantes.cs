@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,37 @@ namespace GestorDeEstudantesT7
 
         private void dataGridViewListaDeEstudantes1_DoubleClick(object sender, EventArgs e)
         {
-            // exibir as informações do estudante ao clicar nele durante
+                // exibir as informações do estudante ao clicar nele duas vezes.
+                FormAtualizarApagarEstudante formAtualizarApagarEstudante =
+                    new FormAtualizarApagarEstudante();
+
+                formAtualizarApagarEstudante.textBoxID.Text =
+                    dataGridViewListaDeEstudantes1.CurrentRow.Cells[0].Value.ToString();
+                formAtualizarApagarEstudante.textBoxNome.Text =
+                    dataGridViewListaDeEstudantes1.CurrentRow.Cells[1].Value.ToString();
+                formAtualizarApagarEstudante.textBoxSobrenome.Text =
+                    dataGridViewListaDeEstudantes1.CurrentRow.Cells[2].Value.ToString();
+
+            formAtualizarApagarEstudante.Nascimento.Value =
+                (DateTime)dataGridViewListaDeEstudantes1.CurrentRow.Cells[3].Value;
+
+            if (dataGridViewListaDeEstudantes1.CurrentRow.Cells[4].Value.ToString() == "Feminino")
+            {
+                formAtualizarApagarEstudante.radioButtonFem.Checked = true;
+            }
+            else
+            {
+                formAtualizarApagarEstudante.
+                    radioButtonMasc.Checked = true;
+            }
+
+            formAtualizarApagarEstudante.textBoxTelefone.Text = dataGridViewListaDeEstudantes1.CurrentRow.Cells[5].Value.ToString();
+            formAtualizarApagarEstudante.textBoxTelefone.Text = dataGridViewListaDeEstudantes1.CurrentRow.Cells[5].Value.ToString();
+
+
+            byte[] foto;
+                foto = (byte[])dataGridViewListaDeEstudantes1.CurrentRow.Cells[7].Value;
+            MemoryStream fotoDoAluno = new MemoryStream(foto);
         }
 
         private void buttonAtualizar_Click(object sender, EventArgs e)

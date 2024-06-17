@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -228,12 +228,12 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "Endereço";
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 20);
-            this.textBox1.TabIndex = 37;
+            this.textBoxID.Location = new System.Drawing.Point(162, 29);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(85, 20);
+            this.textBoxID.TabIndex = 37;
             // 
             // label8
             // 
@@ -260,7 +260,7 @@
             this.ClientSize = new System.Drawing.Size(417, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonCadastrar);
@@ -288,8 +288,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton radioButtonFem;
-        private System.Windows.Forms.RadioButton radioButtonMasc;
         private System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Button buttonCancelar;
         internal System.Windows.Forms.Button buttonCadastrar;
@@ -307,8 +305,10 @@
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label7;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox textBoxID;
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.RadioButton radioButtonFem;
+        internal System.Windows.Forms.RadioButton radioButtonMasc;
     }
 }

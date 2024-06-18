@@ -71,6 +71,7 @@
             this.buttonCadastrar.TabIndex = 34;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // textBoxEndereco
             // 
@@ -89,9 +90,9 @@
             // 
             // buttonEnviarFoto
             // 
-            this.buttonEnviarFoto.Location = new System.Drawing.Point(26, 176);
+            this.buttonEnviarFoto.Location = new System.Drawing.Point(20, 176);
             this.buttonEnviarFoto.Name = "buttonEnviarFoto";
-            this.buttonEnviarFoto.Size = new System.Drawing.Size(130, 37);
+            this.buttonEnviarFoto.Size = new System.Drawing.Size(136, 37);
             this.buttonEnviarFoto.TabIndex = 31;
             this.buttonEnviarFoto.Text = "Enviar foto";
             this.buttonEnviarFoto.UseVisualStyleBackColor = true;

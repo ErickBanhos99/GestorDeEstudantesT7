@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{034603FF-DCBF-475E-B0FA-2D6E12133636}</ProjectGuid>
+    <ProjectGuid>{C89E4BB1-8DE4-45B5-AAFA-3391C5D6FC8A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GestorDeEstudantesT7</RootNamespace>
     <AssemblyName>GestorDeEstudantesT7</AssemblyName>
@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=8.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,6 +57,24 @@
     <Compile Include="FormAtualizarApagarEstudante.Designer.cs">
       <DependentUpon>FormAtualizarApagarEstudante.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEstatisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEstatisticas.Designer.cs">
+      <DependentUpon>FormEstatisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGerenciarAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGerenciarAlunos.Designer.cs">
+      <DependentUpon>FormGerenciarAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImprimirAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImprimirAlunos.Designer.cs">
+      <DependentUpon>FormImprimirAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInserirEstudante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +87,11 @@
     <Compile Include="FormListarEstudantes.Designer.cs">
       <DependentUpon>FormListarEstudantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_Form.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Form.Designer.cs">
-      <DependentUpon>Login_Form.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -86,17 +105,26 @@
     <EmbeddedResource Include="FormAtualizarApagarEstudante.resx">
       <DependentUpon>FormAtualizarApagarEstudante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEstatisticas.resx">
+      <DependentUpon>FormEstatisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGerenciarAlunos.resx">
+      <DependentUpon>FormGerenciarAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImprimirAlunos.resx">
+      <DependentUpon>FormImprimirAlunos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInserirEstudante.resx">
       <DependentUpon>FormInserirEstudante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListarEstudantes.resx">
       <DependentUpon>FormListarEstudantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login_Form.resx">
-      <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

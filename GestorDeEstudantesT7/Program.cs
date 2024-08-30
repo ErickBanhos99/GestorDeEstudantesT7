@@ -18,7 +18,7 @@ namespace GestorDeEstudantesT7
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login_Form());
 
-            Login_Form formLogin = new Login_Form();
+            FormLogin formLogin = new FormLogin();
 
             if (formLogin.ShowDialog() == DialogResult.OK)
             {

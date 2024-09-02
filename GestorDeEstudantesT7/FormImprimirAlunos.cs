@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,64 +67,59 @@ namespace GestorDeEstudantesT7
 
         private void buttonFiltrar_Click(object sender, EventArgs e)
         {
-            // Filtra os dados que serão exibidos na tabela.
-            MySqlCommand comando;
-            string busca;
 
-            // verificar se o usuário quer usar um intervalo
-            // de datas
-            if (radioButtonSim.Checked == true)
-            {
-                // pega as datas que o usuário selecionou.
-                string dataInicial = dateTimePickerDataInicial.Value.ToString("yyyy-MM-dd");
-                // formato dia/mês/ano ex. 27/08/2024.
-                string dataFinal = dateTimePickerDataFinal.Value.ToString("yyyy-MM-dd");
-
-                if (radioButtonMasculino.Checked)
-                {
-                    busca = "SELECT * FROM `estudantes` WHERE `nascimento` BETWEEN '"
-                        + dataInicial + "' AND '"
-                        + dataFinal + "' AND genero = 'Masculino'";
-                }
-                else if (radioButtonFeminino.Checked)
-                {
-                    busca = "SELECT * FROM `estudantes` WHERE `nascimento` BETWEEN '"
-                        + dataInicial + "' AND '"
-                        + dataFinal + "' AND genero = 'Feminino'";
-                }
-                else
-                {
-                    busca = "SELECT * FROM `estudantes` WHERE `nascimento` BETWEEN '"
-                        + dataInicial + "' AND '"
-                        + dataFinal + "'";
-                }
-                
-                comando = new MySqlCommand(busca);
-                preencheTabela(comando);
-            }
-            else
-            {
-                if (radioButtonMasculino.Checked)
-                {
-                    busca = "SELECT * FROM `estudantes` WHERE genero = 'Masculino'";
-                }
-                else if (radioButtonFeminino.Checked)
-                {
-                    busca = "SELECT * FROM `estudantes` WHERE genero = 'Feminino'";
-                }
-                else
-                {
-                    busca = "SELECT * FROM `estudantes`";
-                }
-
-                comando = new MySqlCommand(busca);
-                preencheTabela(comando);
-            }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            // Salva o arquivo em um arquivo de texto
+            string caminho = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/lista_de_estudante.txt";
 
+
+            using (var escritor = new StreamWriter(caminho))
+            {
+                // Verifica se ja existe
+                if (!File.Exists(caminho))
+                {
+                    File.Create(caminho);
+                }
+
+                DateTime dataDeNascimento;
+
+                for (int i = 0; i < dataGridViewListaDeAlunos.Rows.Count; i++)
+                {
+                    // Percorre as colunas
+                    for (int j = 0; j < dataGridViewListaDeAlunos.Columns.Count - 1; j++)
+                    {
+                        if (j == 3)
+                        {
+                            dataDeNascimento = Convert.ToDateTime(dataGridViewListaDeAlunos.Rows[i].Cells[j].Value.ToString());
+                            // Escreve as informações de cada coluna (célula) de uma mesma linha.
+                            escritor.Write("\t" +
+                                dataDeNascimento.ToString("dd-MM-yyyy")
+                                + "\t" + "|");
+                        }
+                        else if (j == dataGridViewListaDeAlunos.Columns.Count - 2)
+                        {
+                            escritor.Write("\t" +
+                                dataGridViewListaDeAlunos.Rows[i].Cells[j].Value.ToString());
+                        }
+                        else
+                        {
+                            // Escreve as informações de cada coluna (célula) de uma mesma linha.
+                            escritor.Write("\t" +
+                                dataGridViewListaDeAlunos.Rows[i].Cells[j].Value.ToString()
+                                + "\t" + "|");
+                        }
+                    }
+                    escritor.WriteLine();
+                    escritor.WriteLine("-----------------------------------------------------------------------------------------------" +
+                        "-------------------------------------------------------------");
+                }
+
+                escritor.Close();
+                MessageBox.Show("Dados salvos");
+            }
         }
     }
 }
